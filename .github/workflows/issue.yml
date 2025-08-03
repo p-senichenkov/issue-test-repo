@@ -10,4 +10,4 @@ jobs:
         run: |
           echo ${{ secrets.ISSUE_TEST_TOKEN }} | gh auth login --with-token
 
-          gh issue create --title 'Test issue' --body 'test test test' --label 'test-label'
+          gh issue create --title 'Test issue' --body 'test test test'
