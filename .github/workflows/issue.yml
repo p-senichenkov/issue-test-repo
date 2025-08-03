@@ -1,0 +1,12 @@
+on:
+  push:
+
+jobs:
+  test-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create issue
+        run: |
+          echo ${{ secrets.ISSUE_TEST_TOKEN }} | gh auth login --scopes 'project' --with-token
+
+          gh issue create --title 'Test issue' --body 'test test test' --label 'test-label'
