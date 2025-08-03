@@ -7,6 +7,6 @@ jobs:
     steps:
       - name: Create issue
         run: |
-          echo ${{ secrets.ISSUE_TEST_TOKEN }} | gh auth login --scopes 'project' --with-token
+          echo ${{ secrets.ISSUE_TEST_TOKEN }} | gh auth login --with-token
 
           gh issue create --title 'Test issue' --body 'test test test' --label 'test-label'
